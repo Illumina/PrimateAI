@@ -1,12 +1,13 @@
 
-PrimateAI:  deep residual neural network for classifying the pathogenicity of missense mutations.    
+#PrimateAI:  deep residual neural network for classifying the pathogenicity of missense mutations.    
 
 PrimateAI is trained on a dataset of ~380,000 common missense variants from humans and six non-human primate species, using a semi-supervised benign vs unlabeled training regimen.  The input to the network is the amino acid sequence flanking the variant of interest and the orthologous sequence alignments in other species, without any additional human-engineered features, and the output is the pathogenicity score from 0 (less pathogenic) to 1 (more pathogenic).  To incorporate information about protein structure, PrimateAI learns to predict secondary structure and solvent accessibility from amino acid sequence, and includes these as sub-networks in the full model.  The total size of the network, with protein structure included, is 36 layers of convolutions, consisting of roughly 400,000 trainable parameters. 
 
 The method is described in the publication:    
-[https://www.nature.com/articles/s41588-018-0167-z](Sundaram, L et al, Predicting the clinical impact of human mutation with deep neural networks.  Nature Genetics 2018.) 
-
+Sundaram, L et al, Predicting the clinical impact of human mutation with deep neural networks.  Nature Genetics 2018. 
+https://www.nature.com/articles/s41588-018-0167-z
     
+
 ARCHITECTURE of DEEP LEARNING NETWORK    
 The pathogenicity prediction network takes as input the 51-length amino acid sequence centered at the variant of interest, and the outputs of the secondary structure and solvent accessibility networks for each variant.  To represent the variant, the network receives both the 51-length reference amino acid sequence ome and the alternative 51-length amino acid sequence with the missense variant substituted in at the central position.  Three 51-length position frequency matrices (PFMs) are generated from multiple sequence alignments of 99 vertebrates, including one for 11 primates, one for 50 mammals excluding primates, and one for 38 vertebrates excluding primates and mammals.  
 The five direct input channels are passed through an upsampling convolution layer of 40 kernels with linear activations. The human reference amino acid sequence (1a) is merged with the PFMs from primate, mammal, and vertebrate multiple sequence alignments (Merge 1a).   Similarly, the human alternative amino acid sequence (1b), is merged with the PFMs from primate, mammal, and vertebrate multiple sequence alignments (Merge 1b).  This creates two parallel tracks, one for the reference sequence, and one with the alternate sequence with the variant substituted in.      
