@@ -24,7 +24,7 @@ You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 alon
 INSTRUCTIONS    
 The Python script provided includes the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids.
 
-To run this script, users need to pre-install Python packages numpy, tensorflow, and keras. In their python script, they can import this script to adopt PrimateAI models. 
+To run this script, users need to pre-install Python packages numpy, tensorflow, and keras. In their Python script, they can import this script to adopt PrimateAI models. 
 
 
 DATA for DOWNLOADING    
