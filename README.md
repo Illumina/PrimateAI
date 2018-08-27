@@ -15,7 +15,7 @@ The merged feature map of both reference channel and the alternative channel (Me
 The secondary structure deep learning network predicts 3-state secondary structure at each amino acid position: alpha helix (H), beta sheet (B), and coils (C).  The solvent accessibility network predicts 3-state solvent accessibility at each amino acid position:  buried (B), intermediate (I), and exposed (E).  Both networks only take the flanking amino acid sequence as their inputs, and were trained using labels from known non-redundant crystal structures in the Protein DataBank.  For the input to the pre-trained 3-state secondary structure and 3-state solvent accessibility networks, we used a single PFM matrix generated from the multiple sequence alignments for all 99 vertebrates, also with length 51 and depth 20.  After pre-training the networks on known crystal structures from the Protein DataBank, the final two layers for the secondary structure and solvent models were removed and the output of the network was directly connected to the input of the pathogenicity model.  The best testing accuracy achieved for the 3-state secondary structure prediction model is 79.86 %.        
 Both our deep learning network for pathogenicity prediction (PrimateAI) and deep learning networks for predicting secondary structure and solvent accessibility adopted the architecture of residual blocks.
 
-
+![PrimateAI](FigureS4.pdf)
 
 LICENSE    
 Copyright (c) 2018 Illumina, Inc. All rights reserved.
