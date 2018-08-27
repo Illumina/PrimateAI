@@ -13,7 +13,7 @@ The secondary structure deep learning network predicts 3-state secondary structu
 Both our deep learning network for pathogenicity prediction (PrimateAI) and deep learning networks for predicting secondary structure and solvent accessibility adopted the architecture of residual blocks.
 
 
-LICENSE
+LICENSE    
 Copyright (c) 2018 Illumina, Inc. All rights reserved.
 
 This software is provided under the terms and conditions of the GNU GENERAL PUBLIC LICENSE Version 3
@@ -21,13 +21,13 @@ This software is provided under the terms and conditions of the GNU GENERAL PUBL
 You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 along with this program. If not, see https://github.com/illumina/licenses/.
 
 
-INSTRUCTIONS
+INSTRUCTIONS    
 The Python script provided includes the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids.
 
 To run this script, users need to pre-install Python packages numpy, tensorflow, and keras. In their python script, they can import this script to adopt PrimateAI models. 
 
 
-DATA for DOWNLOADING
+DATA for DOWNLOADING    
 Users can download labeled training data on BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
 Or they can prepare their own training, validation, and testing datasets.
