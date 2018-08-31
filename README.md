@@ -35,26 +35,28 @@ Demo dataset can be downloaded at https://basespace.illumina.com/s/cPgCSmecvhb4
 
 The demo dataset contains 9 files:
 1. full_set_snp_info.csv: contains information of all the 70M possible missense SNPs. Generally users can reuse this file even if they prepare their own training, validation, and testing datasets.
+
    Each row has the following columns:
-    id: SNP ID
-    chr: chromosome
-    pos: position on hg19
-    ref_nuc: reference nucleotide on hg19
-    ref_codon: reference codon
-    ref_aa: reference amino acid
-    alt_nuc: alternative nucleotide on hg19
-    alt_codon: alternative codon
-    alt_aa: alternative amino acid
-    strand: 1 = positive strand, 0 = negative strand
-    gene_name: UCSC ID for the gene containing this missense variant
-    change_position_1based: the position of amino acid in the protein (gene) where this variant occurrs. Note the position is 1-based.
-    total_length: the length of the protein (gene) in terms of amino acid 
-    trinucleotide_bases: the trinucleotid background around this variant
-    label: prior labeling of pathogenicity. Benign and Unknown.
-    species: the species that this variant is observed
-    mirrored_column: used to sample unknown variants to match benign variants.
-    mean_coverage: averaged depth of ExAC data at this variant position
-    mean_coverage_bins: binning the mean coverage
+   
+    id: SNP ID  
+    chr: chromosome  
+    pos: position on hg19  
+    ref_nuc: reference nucleotide on hg19  
+    ref_codon: reference codon  
+    ref_aa: reference amino acid  
+    alt_nuc: alternative nucleotide on hg19  
+    alt_codon: alternative codon  
+    alt_aa: alternative amino acid  
+    strand: 1 = positive strand, 0 = negative strand  
+    gene_name: UCSC ID for the gene containing this missense variant  
+    change_position_1based: the position of amino acid in the protein (gene) where this variant occurrs. Note the position is 1-based.  
+    total_length: the length of the protein (gene) in terms of amino acid   
+    trinucleotide_bases: the trinucleotid background around this variant  
+    label: prior labeling of pathogenicity. Benign and Unknown.  
+    species: the species that this variant is observed  
+    mirrored_column: used to sample unknown variants to match benign variants.  
+    mean_coverage: averaged depth of ExAC data at this variant position  
+    mean_coverage_bins: binning the mean coverage  
     
 Example input is:  
 ```
