@@ -36,6 +36,31 @@ To run this script, users need to pre-install Python packages numpy, tensorflow,
 
 
 ## DATA for DOWNLOADING    
+Demo dataset can be downloaded at https://basespace.illumina.com/s/cPgCSmecvhb4
+
+The demo dataset contains 9 files:
+1. full_set_snp_info.csv: contains information of all the 70M possible missense SNPs. Each row has 
+    id: SNP ID
+
+Example input is:   id,chr,pos,ref_nuc,ref_codon,ref_aa,alt_nuc,alt_codon,alt_aa,strand,gene_name,change_position_1based,total_length,trinucleotide_bases,label,species,mirrored_column,mean_coverage,mean_coverage_bins
+snp0,chr10,1046704,C,CGT,R,T,TGT,C,1,uc001ift.3,248,635,CCG,Benign,human,0.279792,45.49,50.0
+snp1,chr10,1046704,C,CGT,R,G,GGT,G,1,uc001ift.3,248,635,CCG,Unknown,unknown,0.011504,45.49,50.0
+snp2,chr10,1046704,C,CGT,R,A,AGT,S,1,uc001ift.3,248,635,CCG,Unknown,unknown,0.013494,45.49,50.0
+snp3,chr10,1046705,G,CGT,R,A,CAT,H,1,uc001ift.3,248,635,CGT,Unknown,unknown,0.33432,45.67,50.0
+............
+
+
+2. conservation_profile.npy: contains the gene sequence and 99 vertebrate conservation profile for each canonical gene.
+
+3. benign_train_snps.txt: contains the list of benign SNP IDs (50K) that are used for training.
+4. benign_validation_snps.txt: contains the list of benign SNP IDs (10K) that are used for validation.
+5. benign_test_snps.txt: contains the list of benign SNP IDs (10K) that are used for testing.
+6. unknown_validation_snps.txt: contains the list of unknown SNP IDs (10K) that are used for validation.
+7. unknown_test_snps.txt: contains the list of unknown SNP IDs (10K) that are used for testing.
+8. secondary_structure_seqtoseq.hdf5: contains the trained weights for secondary structure prediction model.
+9. solvent_accessibility_seqtoseq.hdf5: contains the trained weights for solvent accessibility prediction model.
+
+
 Users can download labeled training data on BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
 Or they can prepare their own training, validation, and testing datasets.
