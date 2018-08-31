@@ -29,7 +29,7 @@ This software is provided under the terms and conditions of the GNU GENERAL PUBL
 You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 along with this program. If not, see https://github.com/illumina/licenses/.
 
 
-## INSTRUCTIONS    
+## RUN INSTRUCTIONS    
 The Python script provided includes the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids. These models are written using Python Keras package.
 
 To run this script, users need to pre-install Python packages numpy, tensorflow, and keras. In their Python script, they can import this script to adopt PrimateAI neural network models. 
@@ -43,4 +43,5 @@ Or they can prepare their own training, validation, and testing datasets.
 Users can also download exome-wide predictions of pathogenicity scores from BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
 
-
+## RELEASE NOTE
+Current version of PrimateAI for downloading is v1.0.
