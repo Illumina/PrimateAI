@@ -1,5 +1,5 @@
 
-PrimateAI:  deep residual neural network for classifying the pathogenicity of missense mutations.    
+# PrimateAI:  deep residual neural network for classifying the pathogenicity of missense mutations.    
 
 PrimateAI is trained on a dataset of ~380,000 common missense variants from humans and six non-human primate species, using a semi-supervised benign vs unlabeled training regimen.  The input to the network is the amino acid sequence flanking the variant of interest and the orthologous sequence alignments in other species, without any additional human-engineered features, and the output is the pathogenicity score from 0 (less pathogenic) to 1 (more pathogenic).  To incorporate information about protein structure, PrimateAI learns to predict secondary structure and solvent accessibility from amino acid sequence, and includes these as sub-networks in the full model.  The total size of the network, with protein structure included, is 36 layers of convolutions, consisting of roughly 400,000 trainable parameters. 
 
@@ -18,7 +18,7 @@ Both our deep learning network for pathogenicity prediction (PrimateAI) and deep
 ![Illustration of PrimateAI network](FigureS4.pdf)       
 ![Illustration of secondary structure and solvent accessibility networks](FigureS5.pdf)
 
-LICENSE    
+## LICENSE    
 Copyright (c) 2018 Illumina, Inc. All rights reserved.
 
 This software is provided under the terms and conditions of the GNU GENERAL PUBLIC LICENSE Version 3.
@@ -26,13 +26,13 @@ This software is provided under the terms and conditions of the GNU GENERAL PUBL
 You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 along with this program. If not, see https://github.com/illumina/licenses/.
 
 
-INSTRUCTIONS    
+## INSTRUCTIONS    
 The Python script provided includes the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids. These models are written using Python Keras package.
 
 To run this script, users need to pre-install Python packages numpy, tensorflow, and keras. In their Python script, they can import this script to adopt PrimateAI neural network models. 
 
 
-DATA for DOWNLOADING    
+## DATA for DOWNLOADING    
 Users can download labeled training data on BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
 Or they can prepare their own training, validation, and testing datasets.
