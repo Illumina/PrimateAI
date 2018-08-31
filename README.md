@@ -39,14 +39,34 @@ To run this script, users need to pre-install Python packages numpy, tensorflow,
 Demo dataset can be downloaded at https://basespace.illumina.com/s/cPgCSmecvhb4
 
 The demo dataset contains 9 files:
-1. full_set_snp_info.csv: contains information of all the 70M possible missense SNPs. Each row has 
+1. full_set_snp_info.csv: contains information of all the 70M possible missense SNPs. Generally users can reuse this file even if they prepare their own training, validation, and testing datasets.
+   Each row has the following columns:
     id: SNP ID
-
+    chr: chromosome
+    pos: position on hg19
+    ref_nuc: reference nucleotide on hg19
+    ref_codon: reference codon
+    ref_aa: reference amino acid
+    alt_nuc: alternative nucleotide on hg19
+    alt_codon: alternative codon
+    alt_aa: alternative amino acid
+    strand: 1 = positive strand, 0 = negative strand
+    gene_name: UCSC ID for the gene containing this missense variant
+    change_position_1based: the position of amino acid in the protein (gene) where this variant occurrs. Note the position is 1-based.
+    total_length: the length of the protein (gene) in terms of amino acid 
+    trinucleotide_bases: the trinucleotid background around this variant
+    label: prior labeling of pathogenicity. Benign and Unknown.
+    species: the species that this variant is observed
+    mirrored_column: used to sample unknown variants to match benign variants.
+    mean_coverage: averaged depth of ExAC data at this variant position
+    mean_coverage_bins: binning the mean coverage
+    
 Example input is:   id,chr,pos,ref_nuc,ref_codon,ref_aa,alt_nuc,alt_codon,alt_aa,strand,gene_name,change_position_1based,total_length,trinucleotide_bases,label,species,mirrored_column,mean_coverage,mean_coverage_bins
 snp0,chr10,1046704,C,CGT,R,T,TGT,C,1,uc001ift.3,248,635,CCG,Benign,human,0.279792,45.49,50.0
 snp1,chr10,1046704,C,CGT,R,G,GGT,G,1,uc001ift.3,248,635,CCG,Unknown,unknown,0.011504,45.49,50.0
 snp2,chr10,1046704,C,CGT,R,A,AGT,S,1,uc001ift.3,248,635,CCG,Unknown,unknown,0.013494,45.49,50.0
 snp3,chr10,1046705,G,CGT,R,A,CAT,H,1,uc001ift.3,248,635,CGT,Unknown,unknown,0.33432,45.67,50.0
+
 ............
 
 
@@ -61,9 +81,9 @@ snp3,chr10,1046705,G,CGT,R,A,CAT,H,1,uc001ift.3,248,635,CGT,Unknown,unknown,0.33
 9. solvent_accessibility_seqtoseq.hdf5: contains the trained weights for solvent accessibility prediction model.
 
 
-Users can download labeled training data on BaseSpace:
+Users can download extra data on BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
-Or they can prepare their own training, validation, and testing datasets.
+Or they can prepare their own training, validation, and testing datasets according to the formats of demo datasets.
 
 Users can also download exome-wide predictions of pathogenicity scores from BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
