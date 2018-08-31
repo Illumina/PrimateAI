@@ -123,5 +123,13 @@ PrimateAI v1.0 will generate two files benign_test.csv and unknown_test.csv to o
 
 It will also make a directory "current_weights" to store the trained model weights from eight different neural net models.
 
+### EVALUATION OUTPUTS
+The script evaluation.py will evaluate the output files benign_test.csv and unknown_test.csv and output the accuracy generated from the test dataset.
+
+```
+python  /path/to/source/evaluation.py \
+    /path/to/output/folder/
+```      
+
 ## RELEASE NOTE
 Current version of PrimateAI for downloading is v1.0.
