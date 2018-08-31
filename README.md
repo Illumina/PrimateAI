@@ -71,12 +71,12 @@ snp3,chr10,1046705,G,CGT,R,A,CAT,H,1,uc001ift.3,248,635,CGT,Unknown,unknown,0.33
 
 2. conservation_profile.npy: contains the gene sequence and 99 vertebrate conservation profile for each canonical gene.
 
-   Each row has the following columns:
-     gene_name: UCSC ID for this gene   
-     sequence: amino acid sequence of this gene
-     primate: 51-length position frequecy matrix for 11 primates. The dimension of this matrix is 20x51.
-     mammal: 51-length position frequecy matrix for 50 mammals excluding primates. The dimension of this matrix is 20x51.
-     vertebrate: 51-length position frequecy matrix for 38 vertebrates excluding primates and mammals. The dimension of this matrix is 20x51.
+   Each row has the following columns:  
+     gene_name: UCSC ID for this gene     
+     sequence: amino acid sequence of this gene  
+     primate: 51-length position frequecy matrix for 11 primates. The dimension of this matrix is 20x51.  
+     mammal: 51-length position frequecy matrix for 50 mammals excluding primates. The dimension of this matrix is 20x51.  
+     vertebrate: 51-length position frequecy matrix for 38 vertebrates excluding primates and mammals. The dimension of this matrix is 20x51.  
      
      
 3. benign_train_snps.txt: contains the list of benign SNP IDs (50K) that are used for training.
