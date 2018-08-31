@@ -29,13 +29,8 @@ This software is provided under the terms and conditions of the GNU GENERAL PUBL
 You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 along with this program. If not, see https://github.com/illumina/licenses/.
 
 
-## RUN INSTRUCTIONS    
-The Python script provided includes the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids. These models are written using Python Keras package.
 
-To run this script, users need to pre-install Python packages numpy, tensorflow, and keras. In their Python script, they can import this script to adopt PrimateAI neural network models. 
-
-
-## DATA for DOWNLOADING    
+## DEMO DATA for DOWNLOADING    
 Demo dataset can be downloaded at https://basespace.illumina.com/s/cPgCSmecvhb4
 
 The demo dataset contains 9 files:
@@ -61,14 +56,16 @@ The demo dataset contains 9 files:
     mean_coverage: averaged depth of ExAC data at this variant position
     mean_coverage_bins: binning the mean coverage
     
-Example input is:   id,chr,pos,ref_nuc,ref_codon,ref_aa,alt_nuc,alt_codon,alt_aa,strand,gene_name,change_position_1based,total_length,trinucleotide_bases,label,species,mirrored_column,mean_coverage,mean_coverage_bins
+Example input is:  
+```
+id,chr,pos,ref_nuc,ref_codon,ref_aa,alt_nuc,alt_codon,alt_aa,strand,gene_name,change_position_1based,total_length,trinucleotide_bases,label,species,mirrored_column,mean_coverage,mean_coverage_bins
 snp0,chr10,1046704,C,CGT,R,T,TGT,C,1,uc001ift.3,248,635,CCG,Benign,human,0.279792,45.49,50.0
 snp1,chr10,1046704,C,CGT,R,G,GGT,G,1,uc001ift.3,248,635,CCG,Unknown,unknown,0.011504,45.49,50.0
 snp2,chr10,1046704,C,CGT,R,A,AGT,S,1,uc001ift.3,248,635,CCG,Unknown,unknown,0.013494,45.49,50.0
 snp3,chr10,1046705,G,CGT,R,A,CAT,H,1,uc001ift.3,248,635,CGT,Unknown,unknown,0.33432,45.67,50.0
 
 ............
-
+```
 
 2. conservation_profile.npy: contains the gene sequence and 99 vertebrate conservation profile for each canonical gene.
 
@@ -87,6 +84,34 @@ Or they can prepare their own training, validation, and testing datasets accordi
 
 Users can also download exome-wide predictions of pathogenicity scores from BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
+
+
+
+## RUN INSTRUCTIONS    
+The Python scripts provided include the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids. These models are written using Python Keras package.
+
+To run this script on the demo dataset, users need to set up a deep learning environment on a GPU-server. Pre-install Python packages numpy, scipy, tensorflow, keras, pandas, glob, and multiprocessing. Then download the demo dataset and unzip it. Download the script folder, which contains five files.
+
+The command to run this PrimateAI script is :
+```
+python  /path/to/source/PrimateAI_v1.0.py \
+    /path/to/demodata/full_set_snp_info.csv \
+    /path/to/demodata/conservation_profile.npy
+    /path/to/demodata/benign_train_snps.txt
+    /path/to/demodata/benign_validation_snps.txt
+    /path/to/demodata/unknown_validation_snps.txt
+    /path/to/demodata/benign_test_snps.txt
+    /path/to/demodata/unknown_test_snps.txt
+    /path/to/demodata/secondary_structure_seqtoseq.hdf5
+    /path/to/demodata/solvent_accessibility_seqtoseq.hdf5
+    /path/to/output/folder/
+```
+The script trains eight separate neural net models and ensemble them. Thus it paralleles the jobs on 8 GPUs. Users can modify the script to suit their needs.
+
+### OUTPUT FILES
+PrimateAI v1.0 will generate two files benign_test.csv and unknown_test.csv to output the prediction results for benign_test_snps.txt and unknown_test_snps.txt. The last column is the ensembled predicted pathogenicity for each variants.
+
+It will also make a directory "current_weights" to store the trained model weights from eight different neural net models.
 
 ## RELEASE NOTE
 Current version of PrimateAI for downloading is v1.0.
