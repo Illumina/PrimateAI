@@ -100,7 +100,7 @@ https://basespace.illumina.com/s/cPgCSmecvhb4
 ## RUN INSTRUCTIONS    
 The Python scripts provided include the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids. These models are written using Python Keras package.
 
-To run this script on the demo dataset, users need to set up a deep learning environment on a GPU-server. Pre-install Python packages numpy, scipy, tensorflow, keras, pandas, glob, and multiprocessing. Then download the demo dataset and unzip it. Download the script folder, which contains five files.
+To run this script on the demo dataset, users need to set up a deep learning environment on a GPU-server. Pre-install Python packages numpy, scipy, tensorflow, keras, pandas, glob, and multiprocessing. Then download the demo dataset and unzip it. Download the script folder, which contains four files.
 
 The command to run this PrimateAI script is :
 ```
