@@ -31,7 +31,7 @@ You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 alon
 
 
 ## DEMO DATA for DOWNLOADING    
-Demo dataset can be downloaded at https://basespace.illumina.com/s/cPgCSmecvhb4
+Demo dataset (demodata.zip) can be downloaded from Illumina basespace at https://basespace.illumina.com/s/cPgCSmecvhb4 .
 
 The demo dataset contains 9 files:
 1. full_set_snp_info.csv: contains information of all the 70M possible missense SNPs. Generally users can reuse this file even if they prepare their own training, validation, and testing datasets.
