@@ -92,7 +92,7 @@ Users can download extra data on BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
 Or they can prepare their own training, validation, and testing datasets according to the formats of demo datasets.
 
-Users can also download exome-wide predictions of pathogenicity scores from BaseSpace:
+Users can also download exome-wide predictions of pathogenicity scores (PrimateAI_scores_v0.2.tsv.gz) from BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
 
 
@@ -104,7 +104,7 @@ To run this script on the demo dataset, users need to set up a deep learning env
 
 The command to run this PrimateAI script is :
 ```
-python  /path/to/source/PrimateAI_v1.0.py \
+python  /path/to/source/PrimateAI_v0.2.py \
     /path/to/demodata/full_set_snp_info.csv \
     /path/to/demodata/conservation_profile.npy
     /path/to/demodata/benign_train_snps.txt
@@ -119,7 +119,7 @@ python  /path/to/source/PrimateAI_v1.0.py \
 The script trains eight separate neural net models and ensemble them. Thus it paralleles the jobs on 8 GPUs. Users can modify the script to suit their needs.
 
 ### OUTPUT FILES
-PrimateAI v1.0 will generate two files benign_test.csv and unknown_test.csv to output the prediction results for benign_test_snps.txt and unknown_test_snps.txt. The last column is the ensembled predicted pathogenicity for each variants.
+PrimateAI v0.2 will generate two files benign_test.csv and unknown_test.csv to output the prediction results for benign_test_snps.txt and unknown_test_snps.txt. The last column is the ensembled predicted pathogenicity for each variants.
 
 It will also make a directory "current_weights" to store the trained model weights from eight different neural net models.
 
