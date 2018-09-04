@@ -132,4 +132,4 @@ python  /path/to/source/evaluation.py \
 ```      
 
 ## RELEASE NOTE
-Current version of PrimateAI for downloading is v1.0.
+Current version of PrimateAI for downloading is v0.2.
