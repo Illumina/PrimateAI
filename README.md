@@ -100,7 +100,7 @@ https://basespace.illumina.com/s/cPgCSmecvhb4
 ## RUN INSTRUCTIONS    
 The Python scripts provided include the deep residual neural network for variant pathogencity estimation, as well as two deep residual neural models for predicting secondary structure and solvent accessibility of amino acids. 
 
-Note that these models are developed under Python 2.7.13, Tensorflow 1.2.0 and Keras package 2.0.5. Please install these version to execute the scripts.
+Note that these models are developed under Python 2.7.13, Tensorflow 1.2.0 and Keras package 2.0.5. Please install these versions to execute the scripts.
 
 To run this script on the demo dataset, users need to set up a deep learning environment on a GPU-server. Pre-install Python packages numpy, scipy, tensorflow, keras, pandas, glob, and multiprocessing. Then download the demo dataset and unzip it. Download the source folder, which contains four Python scripts.
 
