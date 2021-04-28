@@ -92,8 +92,9 @@ Users can download extra data on BaseSpace:
 https://basespace.illumina.com/s/cPgCSmecvhb4
 Or they can prepare their own training, validation, and testing datasets according to the formats of demo datasets.
 
-Users can also download exome-wide predictions of pathogenicity scores (PrimateAI_scores_v0.2.tsv.gz) from BaseSpace:
-https://basespace.illumina.com/s/cPgCSmecvhb4
+Users can also download exome-wide predictions of pathogenicity scores (PrimateAI_scores_v0.2.tsv.gz) from BaseSpace: 
+https://basespace.illumina.com/s/cPgCSmecvhb4.  
+These annotations are free for academic and not-for-profit use; other use requires a commercial license from Illumina, Inc.
 
 
 
