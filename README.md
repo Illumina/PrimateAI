@@ -31,7 +31,7 @@ You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 alon
 
 
 ## DEMO DATA for DOWNLOADING    
-Demo dataset (demodata.zip) can be downloaded from Illumina basespace at https://basespace.illumina.com/s/cPgCSmecvhb4 .
+Demo dataset (demodata.zip) can be downloaded from Illumina basespace at https://basespace.illumina.com/s/yYGFdGih1rXL .
 
 The demo dataset contains 9 files:
 1. full_set_snp_info.csv: contains information of all the 70M possible missense SNPs. Generally users can reuse this file even if they prepare their own training, validation, and testing datasets.
@@ -89,11 +89,11 @@ snp3,chr10,1046705,G,CGT,R,A,CAT,H,1,uc001ift.3,248,635,CGT,Unknown,unknown,0.33
 
 
 Users can download extra data on BaseSpace:
-https://basespace.illumina.com/s/cPgCSmecvhb4
+https://basespace.illumina.com/s/yYGFdGih1rXL
 Or they can prepare their own training, validation, and testing datasets according to the formats of demo datasets.
 
 Users can also download exome-wide predictions of pathogenicity scores (PrimateAI_scores_v0.2.tsv.gz) from BaseSpace: 
-https://basespace.illumina.com/s/cPgCSmecvhb4.  
+https://basespace.illumina.com/s/yYGFdGih1rXL.  
 These annotations are free for academic and not-for-profit use; other use requires a commercial license from Illumina, Inc.
 
 
