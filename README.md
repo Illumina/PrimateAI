@@ -28,6 +28,7 @@ This software is provided under the terms and conditions of the GNU GENERAL PUBL
 
 You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 along with this program. If not, see https://github.com/illumina/licenses/.
 
+PrimateAI source code is provided under the GNU General Public license v3.0 (GPLv3) license. PrimateAI includes several third party packages provided under other open source licenses, please see COPYRIGHT.txt for additional details. PrimateAI models are provided under Creative Commons — Attribution-NonCommercial 4.0 International (CC BY NC 4.0) license for academic and non-commercial use; other use requires a commercial license from Illumina, Inc.  
 
 
 ## DEMO DATA for DOWNLOADING    
