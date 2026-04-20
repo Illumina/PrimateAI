@@ -24,11 +24,11 @@ Both our deep learning network for pathogenicity prediction (PrimateAI) and deep
 ## LICENSE    
 Copyright (c) 2018 Illumina, Inc. All rights reserved.
 
-This software is provided under the terms and conditions of the GNU GENERAL PUBLIC LICENSE Version 3.
+This software is provided under the terms and conditions of the PolyForm Strict License 1.0.0.
 
-You should have received a copy of the GNU GENERAL PUBLIC LICENSE Version 3 along with this program. If not, see https://github.com/illumina/licenses/.
+You should have received a copy of the [PolyForm Strict License 1.0.0](https://github.com/Illumina/PrimateAI/blob/master/LICENSE) along with this program.
 
-PrimateAI source code is provided under the GNU General Public license v3.0 (GPLv3) license. PrimateAI includes several third party packages provided under other open source licenses, please see COPYRIGHT.txt for additional details. PrimateAI models are provided under Creative Commons — Attribution-NonCommercial 4.0 International (CC BY NC 4.0) license for academic and non-commercial use; other use requires a commercial license from Illumina, Inc.  
+PrimateAI source code is provided under the PolyForm Strict License 1.0.0 . PrimateAI includes several third party packages provided under other open source licenses, please see COPYRIGHT.txt for additional details. PrimateAI models are provided under Creative Commons — Attribution-NonCommercial 4.0 International (CC BY NC 4.0) license for academic and non-commercial use; other use requires a commercial license from Illumina, Inc.  
 
 
 ## DEMO DATA for DOWNLOADING    
