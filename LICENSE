@@ -1,4 +1,5 @@
-PrimateAI source code is provided under the PolyForm Strict License 1.0.0 (GPLv3) license. PrimateAI includes several third party packages provided under other open source licenses, please see COPYRIGHT.txt for additional details. PrimateAI models are provided under Creative Commons — Attribution-NonCommercial 4.0 International (CC BY NC 4.0) license for academic and non-commercial use; other use requires a commercial license from Illumina, Inc.  The PrimateAI scores for all possible substitutions are free for academic and not-for-profit use; other use requires a commercial license from Illumina, Inc.
+PrimateAI source code is provided under the PolyForm Strict License 1.0.0 license. PrimateAI includes several third party packages provided under other open source licenses, please see COPYRIGHT.txt for additional details.
+PrimateAI models are provided under Creative Commons — Attribution-NonCommercial 4.0 International (CC BY NC 4.0) license for academic and non-commercial use; other use requires a commercial license from Illumina, Inc.  The PrimateAI scores for all possible substitutions are free for academic and not-for-profit use; other use requires a commercial license from Illumina, Inc.
 
 # PolyForm Strict License 1.0.0
 
